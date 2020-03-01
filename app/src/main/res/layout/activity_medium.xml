@@ -19,25 +19,25 @@
         android:layout_height="match_parent" >
 
     <Button
-        android:id="@+id/tour"
+        android:id="@+id/tours"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/menu" />
 
     <Button
-        android:id="@+id/view_map"
+        android:id="@+id/v_map"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/map_bt" />
 
     <Button
-        android:id="@+id/profile"
+        android:id="@+id/user"
         android:layout_width="426dp"
         android:layout_height="58dp"
         android:text="@string/profile" />
 
     <Button
-        android:id="@+id/steps"
+        android:id="@+id/step"
         android:layout_width="411dp"
         android:layout_height="66dp"
         android:text="@string/step" />

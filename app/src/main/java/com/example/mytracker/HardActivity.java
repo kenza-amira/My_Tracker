@@ -27,10 +27,10 @@ public class HardActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium);
 
-        myMap = (Button) findViewById(R.id.view_map);
-        myProfile = (Button) findViewById(R.id.profile);
-        mySteps = (Button) findViewById(R.id.steps);
-        home = (Button) findViewById(R.id.tour);
+        myMap = (Button) findViewById(R.id.view_maps);
+        myProfile = (Button) findViewById(R.id.userprof);
+        mySteps = (Button) findViewById(R.id.walk);
+        home = (Button) findViewById(R.id.opt);
         myMap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

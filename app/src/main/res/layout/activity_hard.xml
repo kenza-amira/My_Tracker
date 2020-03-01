@@ -17,25 +17,25 @@
 
 
     <Button
-        android:id="@+id/tour"
+        android:id="@+id/opt"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="menu" />
 
     <Button
-        android:id="@+id/view_map"
+        android:id="@+id/view_maps"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:text="@string/map_bt" />
 
     <Button
-        android:id="@+id/profile"
+        android:id="@+id/userprof"
         android:layout_width="426dp"
         android:layout_height="wrap_content"
         android:text="@string/profile" />
 
     <Button
-        android:id="@+id/steps"
+        android:id="@+id/walk"
         android:layout_width="411dp"
         android:layout_height="36dp"
         android:text="@string/step" />

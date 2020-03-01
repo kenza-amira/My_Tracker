@@ -1,6 +1,7 @@
 package com.example.mytracker;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -24,11 +25,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private Button mBtMe;
     private Button home;
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        numSteps = 0;
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        numSteps = settings.getInt("steps",numSteps);
         countView = findViewById(R.id.tv_steps);
         mBtMe = (Button) findViewById(R.id.bt_launch_me);
         mBtLaunchActivity = (Button) findViewById(R.id.bt_launch_activity);
@@ -105,6 +109,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         Log.d("Debug", "Work???");
         numSteps++;
         countView.setText(TEXT_NUM_STEPS + numSteps);
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("steps",numSteps);
+        editor.commit();
     }
     private void launchActivity(){
         Intent intent = new Intent(this, MapsActivity.class);

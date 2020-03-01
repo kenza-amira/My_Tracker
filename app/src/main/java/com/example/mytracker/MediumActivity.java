@@ -27,10 +27,10 @@ public class MediumActivity extends FragmentActivity implements OnMapReadyCallba
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medium);
 
-        myMap = (Button) findViewById(R.id.view_map);
-        myProfile = (Button) findViewById(R.id.profile);
-        mySteps = (Button) findViewById(R.id.steps);
-        home = (Button) findViewById(R.id.tour);
+        myMap = (Button) findViewById(R.id.v_map);
+        myProfile = (Button) findViewById(R.id.user);
+        mySteps = (Button) findViewById(R.id.step);
+        home = (Button) findViewById(R.id.tours);
         myMap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
