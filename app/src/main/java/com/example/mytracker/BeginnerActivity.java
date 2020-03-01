@@ -34,6 +34,7 @@ public class BeginnerActivity extends FragmentActivity implements OnMapReadyCall
         myProfile = (Button) findViewById(R.id.profile);
         mySteps = (Button) findViewById(R.id.steps);
         home = (Button) findViewById(R.id.tour);
+
         myMap.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

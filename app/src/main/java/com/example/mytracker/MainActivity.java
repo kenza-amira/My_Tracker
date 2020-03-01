@@ -16,6 +16,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity implements SensorEventListener, StepListener {
     private TextView countView;
+    private TextView tvSteps2;
     private StepDetector simpleStepDetector;
     private SensorManager sensorManager;
     private Sensor accel;
@@ -104,6 +105,19 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
     }
 
+
+
+    public int points(int stepNo){
+        if (numSteps % 1000 == 0) {
+            tvSteps2.setText("Congratulations you have achieved " + stepNo/100 + " points!");
+            return stepNo/100;
+        }
+        return stepNo = 0;
+
+
+
+    }
+
     @Override
     public void step(long timeNs) {
         Log.d("Debug", "Work???");
@@ -113,7 +127,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         SharedPreferences.Editor editor = settings.edit();
         editor.putInt("steps",numSteps);
         editor.commit();
+
+
+        int pointTotal = points(numSteps);
     }
+
     private void launchActivity(){
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);

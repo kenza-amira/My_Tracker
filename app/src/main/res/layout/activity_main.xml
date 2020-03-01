@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:onClick="sendMessage"
     android:orientation="vertical">
 
 
@@ -42,4 +41,10 @@
         android:layout_height="wrap_content"
         android:text="@string/profile" />
 
+    <TextView
+        android:id="@+id/tv_steps2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="100dp"
+        android:gravity="center" />
 </LinearLayout>

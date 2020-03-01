@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Healthy Tourism</string>
+    <string name="app_name">Edi Tracktour</string>
     <string name="title_activity_maps">Map</string>
     <string name="welcoming">Welcome to your Tourism health app</string>
     <string name="easy">The Beginner Tour</string>
