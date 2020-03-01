@@ -31,6 +31,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     LocationManager locationManager;
     private Button mBtGoBack;
+    private Button mBtProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view){
                 launchActivity();
+            }
+        });
+        mBtProfile = (Button) findViewById(R.id.bt_go_profile);
+        mBtProfile.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                launchProfile();
             }
         });
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -74,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String str = addressList.get(0).getLocality();
                         str += addressList.get(0).getCountryName();
                         mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 250.2f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 100.2f));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -155,6 +163,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void launchActivity(){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    private void launchProfile(){
+        Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
     }
 

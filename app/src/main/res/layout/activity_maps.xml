@@ -10,8 +10,8 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="391dp"
-        android:layout_height="685dp"
+        android:layout_width="381dp"
+        android:layout_height="625dp"
         tools:context=".MapsActivity" />
 
     <Button
@@ -19,4 +19,15 @@
         android:layout_width="391dp"
         android:layout_height="50dp"
         android:text="How many steps so far?" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/bt_go_profile"
+        android:layout_width="391dp"
+        android:layout_height="50dp"
+        android:text="Me" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

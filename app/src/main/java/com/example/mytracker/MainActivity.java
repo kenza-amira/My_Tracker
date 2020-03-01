@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private static final String TEXT_NUM_STEPS = "Number of Steps: ";
     private int numSteps;
     private Button mBtLaunchActivity;
+    private Button mBtMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +29,20 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         setContentView(R.layout.activity_main);
         numSteps = 0;
         countView = findViewById(R.id.tv_steps);
-
+        mBtMe = (Button) findViewById(R.id.bt_launch_me);
         mBtLaunchActivity = (Button) findViewById(R.id.bt_launch_activity);
         mBtLaunchActivity.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 launchActivity();
+            }
+        });
+
+
+        mBtMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchProfile();
             }
         });
 
@@ -89,9 +99,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         numSteps++;
         countView.setText(TEXT_NUM_STEPS + numSteps);
     }
-private void launchActivity(){
+    private void launchActivity(){
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
-}
+    }
+    private void launchProfile(){
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
+    }
 
 }
