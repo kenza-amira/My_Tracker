@@ -32,12 +32,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LocationManager locationManager;
     private Button mBtGoBack;
     private Button mBtProfile;
+    private Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         //switch btw activities
+        home = (Button) findViewById(R.id.tour);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                launchHome();
+            }
+        });
         mBtGoBack = (Button) findViewById(R.id.bt_go_back);
         mBtGoBack.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -82,7 +90,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String str = addressList.get(0).getLocality();
                         str += addressList.get(0).getCountryName();
                         mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 100.2f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -170,5 +178,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
     }
-
+    private void launchHome(){
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }

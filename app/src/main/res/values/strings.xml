@@ -1,4 +1,26 @@
 <resources>
-    <string name="app_name">My Tracker</string>
+    <string name="app_name">Healthy Tourism</string>
     <string name="title_activity_maps">Map</string>
+    <string name="welcoming">Welcome to your Tourism health app</string>
+    <string name="easy">The Beginner Tour</string>
+    <string name="easy_desc">The perfect way to discover Edinburgh\'s landmarks while walking
+        (but not too much)</string>
+    <string name="med">The  \"Give it a try\" Tour</string>
+    <string name="med_desc">A deeper dive into Edinburgh\'s hidden gems  while walking
+        (a little more)</string>
+    <string name="hard">The  \"I\'m a pro\" Tour</string>
+    <string name="hard_desc">The adventurous way to discover Edinburgh\'s landmarks while walking
+        (and hiking!)</string>
+    <string name="map_bt">Visualize where you\'ve been</string>
+    <string name="start_st">Let\'s count</string>
+    <string name="stop_st">Enough\, stop counting</string>
+    <string name="profile">My cool stats</string>
+    <string name="title_activity_beginner">Map</string>
+    <string name="title_activity_medium">Map</string>
+    <string name="menu">Home</string>
+    <string name="step">score</string>
+    <string name="title_activity_hard">Map</string>
+
+
+
 </resources>

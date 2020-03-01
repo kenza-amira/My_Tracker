@@ -22,24 +22,24 @@
         android:id="@+id/bt_launch_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="See a Map of your route!" />
+        android:text="@string/map_bt" />
 
     <Button
         android:id="@+id/btn_stop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stop Pedometer" />
+        android:text="@string/stop_st" />
 
     <Button
         android:id="@+id/btn_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Pedometer" />
+        android:text="@string/start_st" />
 
     <Button
         android:id="@+id/bt_launch_me"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="me" />
+        android:text="@string/profile" />
 
 </LinearLayout>

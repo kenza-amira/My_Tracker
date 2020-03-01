@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private int numSteps;
     private Button mBtLaunchActivity;
     private Button mBtMe;
+    private Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
-
+        home = (Button) findViewById(R.id.tour);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                launchHome();
+            }
+        });
         mBtMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,4 +115,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         startActivity(intent);
     }
 
+    private void launchHome(){
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }

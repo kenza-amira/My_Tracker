@@ -10,6 +10,7 @@ import android.widget.Button;
 public class UserActivity extends AppCompatActivity {
     private Button myMap;
     private Button mySteps;
+    private Button home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,14 @@ public class UserActivity extends AppCompatActivity {
                 launchPedometer();
             }
         });
+        home = (Button) findViewById(R.id.tour);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                launchHome();
+            }
+        });
+
     }
     private void launchMap(){
         Intent intent = new Intent(this, MapsActivity.class);
@@ -35,6 +44,10 @@ public class UserActivity extends AppCompatActivity {
     }
     private void launchPedometer(){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    private void launchHome(){
+        Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
 }
